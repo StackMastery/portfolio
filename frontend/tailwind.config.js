@@ -14,7 +14,7 @@ export default {
       },
       fontFamily: {
         primary: ["Space Grotesk", "serif"],
-        second: ["Fira Code", "serif"],
+        second: ["JetBrains Mono", "serif"],
       },
     },
   },
