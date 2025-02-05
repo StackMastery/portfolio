@@ -4,13 +4,17 @@ export default {
   theme: {
     extend: {
       backgroundColor: {
-        primary: "#0F172A",
+        primary: "#0f172a",
       },
       textColor: {
         1: "#607B96",
       },
+      maxWidth: {
+        primary: "1240px",
+      },
       fontFamily: {
-        primary: ["JetBrains Mono", "serif"],
+        primary: ["Space Grotesk", "serif"],
+        second: ["Fira Code", "serif"],
       },
     },
   },
