@@ -9,16 +9,16 @@ export default function Header() {
 
   return (
     <>
-      <section className="flex justify-center fixed w-full bg-[#0b11206d] backdrop-blur border-slate-800/50 border w-full">
+      <section className="flex justify-center fixed z-[999999999999] bg-[#0b11206d] backdrop-blur border-slate-800/50 border w-full">
         <div className="max-w-primary items-center w-full inline-flex justify-between px-5 py-3">
           <Logo width={100} />
           <nav
-            className={`hidden fixed w-full left-0 p-5 translate-y-32 md:block  md:w-fit  md:translate-y-0 md:p-0 md:static ${
+            className={`hidden fixed z-[99999999999] w-full left-0 p-5 translate-y-32 md:block  md:w-fit  md:translate-y-0 md:p-0 md:static ${
               isMenuOpen && "!block"
             }`}
           >
             <div>
-              <ul className="p-5 bg-primary/20 backdrop-blur border border-slate-800 rounded-t-none border-t-0 rounded-xl flex-col flex md:flex-row gap-5 text-xs font-light lowercase md:bg-transparent md:border-0 md:p-0">
+              <ul className="p-5 bg-primary/95 backdrop-blur-2xl  z-[9999999] border border-slate-800 rounded-t-none border-t-0 rounded-xl flex-col flex md:flex-row gap-5 text-xs font-light lowercase md:bg-transparent md:border-0 md:backdrop-blur-none md:p-0">
                 {NavData &&
                   NavData.map((li, index) => (
                     <NavLink
