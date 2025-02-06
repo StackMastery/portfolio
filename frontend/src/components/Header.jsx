@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import Logo from "./ui/Logo";
 import Button from "./ui/Button";
 import { Turn as Hamburger } from "hamburger-react";
@@ -32,8 +31,8 @@ export default function Header() {
               <ul className="p-5 bg-primary/80 backdrop-blur-2xl  z-[9999999] border border-slate-800 rounded-t-none border-t-0 flex-col flex md:flex-row gap-5 text-xs font-light lowercase md:bg-transparent md:border-0 md:backdrop-blur-none md:p-0">
                 {NavData &&
                   NavData.map((li, index) => (
-                    <NavLink
-                      to={li.path}
+                    <a
+                      href={li.path}
                       className={`text-white/80 group hover:text-sky-600 transition-all`}
                       key={`nav-${index}`}
                     >
@@ -41,7 +40,7 @@ export default function Header() {
                         _
                       </span>
                       {li.pathName}
-                    </NavLink>
+                    </a>
                   ))}
               </ul>
             </div>
