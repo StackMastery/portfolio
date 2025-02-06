@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { motion } from "motion/react";
 import { FaReact } from "react-icons/fa";
 import { FcCursor } from "react-icons/fc";
@@ -7,12 +7,16 @@ export default function HeroPreview() {
   const [currentTab, setcurrentTab] = useState(1);
   const [isCursor, setisCursor] = useState(true);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setTimeout(() => {
-      setcurrentTab(2);
+      if (currentTab === 1) {
+        setcurrentTab(2);
+      } else {
+        setcurrentTab(1);
+      }
       setisCursor(false);
     }, 5000);
-  }, []);
+  }, [currentTab]);
 
   return (
     <>
@@ -125,7 +129,7 @@ const Code = () => (
       {"\n"}
       <span className="line  ml-5">
         <span style={{ color: "#dfe0e1" }}>{"        "}avatar: </span>
-        <span style={{ color: " #0284c7" }}>&quot;\/avatar.png&quot;</span>
+        <span style={{ color: " #0284c7" }}>&quot;/avatar.png&quot;</span>
         <span style={{ color: "#dfe0e1" }}>,</span>
       </span>
       {"\n"}
@@ -248,7 +252,7 @@ const Profile = () => (
         Skills.map((skill, index) => (
           <button
             key={`skill-${index + 1}`}
-            className="text-sky-600 border text-xs px-4 border-sky-600 sm:text-sm hover:bg-sky-600 hover:text-white transition-all rounded-full"
+            className="border text-xs px-4  sm:text-sm bg-white/5 text-white/60 border-white/10 transition-all"
           >
             {skill}
           </button>
