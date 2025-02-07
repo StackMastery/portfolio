@@ -9,9 +9,7 @@ export default function HeroDetails() {
         &gt; JR. Front-end developer
       </p>
       <br />
-      <p className="text-1 text-sm font-thin">
-        &#47;&#47; click to see my picture <br /> &#47;&#47; my github account
-      </p>
+      <p className="text-1 text-sm font-thin">&#47;&#47; my github account</p>
       <p className="font-second text-white text-xs sm:text-base">
         <span className="text-blue-600">const</span>{" "}
         <span className="text-[#43D9AD]">githubLink</span> ={" "}

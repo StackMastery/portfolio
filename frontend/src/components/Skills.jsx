@@ -2,6 +2,7 @@ export default function Skills() {
   return (
     <>
       <section
+        id="skills"
         style={{ backgroundImage: `url('/herograds.svg')` }}
         className="flex justify-center bg-slate-900/50 bg-[auto_1800px] bg-no-repeat bg-top border-y border-slate-800 mt-10"
       >
@@ -114,5 +115,6 @@ const SkillsData = [
   {
     icon: "/vercel.svg",
     name: "Vercel",
+    width: 40,
   },
 ];

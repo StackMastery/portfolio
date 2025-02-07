@@ -74,6 +74,10 @@ export default function Header() {
 
 const NavData = [
   {
+    path: "#",
+    pathName: "Home",
+  },
+  {
     path: "#about",
     pathName: "About",
   },
