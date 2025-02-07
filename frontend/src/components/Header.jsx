@@ -2,6 +2,7 @@ import Logo from "./ui/Logo";
 import Button from "./ui/Button";
 import { Turn as Hamburger } from "hamburger-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [isMenuOpen, setisMenuOpen] = useState(false);
@@ -23,7 +24,7 @@ export default function Header() {
         <div className="max-w-primary items-center w-full inline-flex justify-between px-5 py-3">
           <Logo width={100} />
           <nav
-            className={`hidden fixed z-[99999999999] w-full left-0 px-0 p-5 translate-y-32 md:block  md:w-fit  md:translate-y-0 md:p-0 md:static ${
+            className={`hidden fixed z-[99999999999] w-full left-0 px-0 p-5 translate-y-[147px] md:block  md:w-fit  md:translate-y-0 md:p-0 md:static ${
               isMenuOpen && "!block"
             }`}
           >
@@ -64,7 +65,11 @@ export default function Header() {
                 />
               </div>
             </button>
-            <Button>Resume</Button>
+            <Link
+              to={`https://drive.google.com/file/d/1PCfK0OEfWtqyoP3PNaK6kpMn47tM87nl/view?usp=sharing`}
+            >
+              <Button>Resume</Button>
+            </Link>
           </div>
         </div>
       </header>

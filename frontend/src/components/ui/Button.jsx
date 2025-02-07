@@ -1,8 +1,17 @@
-export default function Button({ v, className, children }) {
+export default function Button({
+  v,
+  btnClass,
+  onClick,
+  className,
+  children,
+  ...props
+}) {
   return (
     <>
       <button
-        className={`relative inline-flex hover:scale-95 transition-all overflow-hidden rounded-md p-[1.2px] focus:outline-none duration-500`}
+        onClick={onClick}
+        {...props}
+        className={`relative inline-flex hover:scale-95 transition-all overflow-hidden rounded-md p-[1.2px] focus:outline-none duration-500 ${btnClass}`}
       >
         <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#BAE6FD_0%,#0284C7_50%,#BAE6FD_100%)]" />
         <span

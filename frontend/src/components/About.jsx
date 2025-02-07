@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import Button from "./ui/Button";
 import { FaFacebookF, FaWhatsapp } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function About() {
   const [imageData, setImageData] = useState(null);
@@ -118,10 +119,16 @@ const AboutDetails = () => {
             </div>
             <span className="w-full h-[1px] bg-slate-800 sm:flex my-5" />
             <div className="hidden sm:flex w-full gap-5">
-              <Button className={`py-2`}>Download Resume</Button>
-              <button className="px-5 py-2 bg-white/5 border border-white/10 text-white/70 font-thin rounded-md">
-                View Projects
-              </button>
+              <Link
+                to={`https://drive.google.com/file/d/1PCfK0OEfWtqyoP3PNaK6kpMn47tM87nl/view?usp=sharing`}
+              >
+                <Button className={`py-3`}>Download Resume</Button>
+              </Link>
+              <Link to={`#projects`}>
+                <button className="px-5 py-2 bg-white/5 border border-white/10 text-white/70 font-thin rounded-md">
+                  View Projects
+                </button>
+              </Link>
             </div>
           </div>
         </div>
