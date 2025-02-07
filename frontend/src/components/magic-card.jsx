@@ -7,7 +7,9 @@ import { cn } from "@/lib/utils";
 export function MagicCard({
   children,
   className,
+  sectionClass,
   gradientSize = 200,
+  bgClassName,
   gradientColor = "#262626",
   gradientOpacity = 0.8,
   gradientFrom = "#9E7AFF",
@@ -69,8 +71,12 @@ export function MagicCard({
       ref={cardRef}
       className={cn("group relative flex size-full", className)}
     >
-      <div className="absolute inset-px z-10 rounded-xl bg-primary dark:bg-neutral-950" />
-      <div className="relative w-full z-30 m-[2px]">{children}</div>
+      <div
+        className={`absolute inset-px z-10 rounded-xl bg-primary dark:bg-neutral-950 ${bgClassName}`}
+      />
+      <div className={`relative w-full z-30 m-[2px] ${sectionClass}`}>
+        {children}
+      </div>
       <motion.div
         className="pointer-events-none absolute inset-px z-10 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         style={{

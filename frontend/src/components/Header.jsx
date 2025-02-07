@@ -91,7 +91,7 @@ const NavData = [
   },
   {
     path: "#projects",
-    pathName: "Project",
+    pathName: "Projects",
   },
   {
     path: "#contact",
